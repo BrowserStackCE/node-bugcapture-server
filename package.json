@@ -1,0 +1,24 @@
+{
+  "name": "bugcapture-server",
+  "version": "1.0.0",
+  "description": "Simple Http Server with BrowserStack Bug Capture Web SDK",
+  "main": "bugcapture-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kentonself-browserstack/node-bugcapture-server.git"
+  },
+  "keywords": [
+    "BrowserStack",
+    "Bug",
+    "Capture"
+  ],
+  "author": "Kenton Self",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kentonself-browserstack/node-bugcapture-server/issues"
+  },
+  "homepage": "https://github.com/kentonself-browserstack/node-bugcapture-server#readme"
+}
