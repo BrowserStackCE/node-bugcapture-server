@@ -3,7 +3,7 @@
 const http = require("http");
 const fs = require("fs");
 
-var port
+var global.port = 8000
 
 const server = http.createServer((req, res) => {
   // Check if the request is for an HTML file
@@ -11,9 +11,7 @@ const server = http.createServer((req, res) => {
   console.log(req.url);
   console.log(process.argv.length)
   if (process.argv.length >= 3) {
-     port = process.argv[2]
-  } else {
-    port = 8000
+     global.port = process.argv[2]
   }
   
   process.argv.forEach(function (val, index, array) {
@@ -95,6 +93,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(port, () => {
-  console.log("Server running on port " +  port);
+server.listen(global.port, () => {
+  console.log("Server running on port " +  global.port);
 });
