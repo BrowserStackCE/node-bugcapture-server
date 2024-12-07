@@ -3,6 +3,8 @@
 const http = require("http");
 const fs = require("fs");
 
+var port
+
 const server = http.createServer((req, res) => {
   // Check if the request is for an HTML file
   bugcapture_app_id = process.env.BUGCAPTURE_APP_ID;
