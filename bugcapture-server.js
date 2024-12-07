@@ -7,6 +7,13 @@ const server = http.createServer((req, res) => {
   // Check if the request is for an HTML file
   bugcapture_app_id = process.env.BUGCAPTURE_APP_ID;
   console.log(req.url);
+  console.log(process.argv.length)
+  if (process.argv.length >= 3) {
+     port = process.argv[2]
+  } else {
+    port = 8000
+  }
+  
   process.argv.forEach(function (val, index, array) {
     console.log(index + ": " + val);
   });
