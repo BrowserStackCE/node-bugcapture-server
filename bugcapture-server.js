@@ -3,21 +3,18 @@
 const http = require("http");
 const fs = require("fs");
 
+console.log(process.argv.length)
 global.port = 8000
+if (process.argv.length >= 3) {
+ global.port = process.argv[2]
+ console.log("new port:" + global.port)
+}
 
 const server = http.createServer((req, res) => {
   // Check if the request is for an HTML file
   bugcapture_app_id = process.env.BUGCAPTURE_APP_ID;
   console.log(req.url);
-  console.log(process.argv.length)
-  if (process.argv.length >= 3) {
-     global.port = process.argv[2]
-  }
   
-  process.argv.forEach(function (val, index, array) {
-    console.log(index + ": " + val);
-  });
-
   if (req.url == "/") {
     req.url = "/index.html";
   }
