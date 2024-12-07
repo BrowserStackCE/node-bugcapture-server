@@ -22,7 +22,6 @@ const server = http.createServer((req, res) => {
   fs.readFile(fname, "utf-8", (err, data) => {
     if (req.url.endsWith(".html")) {
       // Modify the HTML content
-      console.log(data);
       var modifiedData = data.replace("<BODY>", "<body>");
       modifiedData = modifiedData.replace("</BODY>", "</body>");
       modifiedData = modifiedData.replace(
