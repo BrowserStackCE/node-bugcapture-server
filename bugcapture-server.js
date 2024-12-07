@@ -3,7 +3,7 @@
 const http = require("http");
 const fs = require("fs");
 
-var global.port = 8000
+global.port = 8000
 
 const server = http.createServer((req, res) => {
   // Check if the request is for an HTML file
