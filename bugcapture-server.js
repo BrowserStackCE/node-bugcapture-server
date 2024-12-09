@@ -3,11 +3,9 @@
 const http = require("http");
 const fs = require("fs");
 
-console.log(process.argv.length)
 global.port = 8000
 if (process.argv.length >= 3) {
  global.port = process.argv[2]
- console.log("new port:" + global.port)
 }
 
 const server = http.createServer((req, res) => {
@@ -25,8 +23,7 @@ const server = http.createServer((req, res) => {
       var modifiedData = data.replace("<BODY>", "<body>");
       modifiedData = modifiedData.replace("</BODY>", "</body>");
       modifiedData = modifiedData.replace(
-        "<body>",
-        "<body>" +
+        "</body>",
           '<script type="text/javascript">' +
           ";(function(){" +
           "const birdeatsbug=(window.birdeatsbug=window.birdeatsbug||[]);" +
@@ -76,7 +73,8 @@ const server = http.createServer((req, res) => {
           bugcapture_app_id +
           "'})" +
           "})();" +
-          "</script>"
+          "</script>" +
+        "</body>"
       );
 
       res.writeHead(200, { "Content-Type": "text/html" });
