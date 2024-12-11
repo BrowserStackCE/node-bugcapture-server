@@ -21,7 +21,10 @@
     "url": "https://github.com/kentonself-browserstack/node-bugcapture-server/issues"
   },
   "homepage": "https://github.com/kentonself-browserstack/node-bugcapture-server#readme",
-  "bin" : {
+  "bin": {
     "bugcapture-server": "../bugcapture-server.js"
-  } 
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
