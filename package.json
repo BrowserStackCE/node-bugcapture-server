@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kentonself-browserstack/node-bugcapture-server.git"
+    "url": "git+https://github.com/browserstackce/node-bugcapture-server.git"
   },
   "keywords": [
     "BrowserStack",
@@ -18,10 +18,13 @@
   "author": "Kenton Self",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kentonself-browserstack/node-bugcapture-server/issues"
+    "url": "https://github.com/browserstackce/node-bugcapture-server/issues"
   },
-  "homepage": "https://github.com/kentonself-browserstack/node-bugcapture-server#readme",
-  "bin" : {
+  "homepage": "https://github.com/browserstackce/node-bugcapture-server#readme",
+  "bin": {
     "bugcapture-server": "../bugcapture-server.js"
-  } 
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
